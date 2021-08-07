@@ -1,0 +1,258 @@
+header {
+    background: url("../images/bg-pattern-intro.svg"),
+    linear-gradient(to right, $color--light--red, $color--red);
+
+    background-position-x: 30%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    color: white;
+    h2,a {
+        margin-left: 2.5rem;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+    border-bottom-left-radius: 10rem;
+}
+
+
+
+nav {
+    padding-top: 4rem;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: $font-ubuntu;
+    .pc 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .blogr {
+
+
+            .arrow {
+                cursor: pointer;
+                margin-left: 2.5rem;
+                img {
+                    margin-left: 0.5rem;
+                    transition: 200ms all ease-in-out;
+                }
+                &:first-of-type {
+                    margin-left: 7rem;
+                }
+    
+                .menu__wrapper {
+                    position: relative;
+                    h2 {
+                        font-weight: 500;
+                        margin: 0;
+                        &:hover {
+                            font-weight: 700;
+                            border-bottom: 2px solid $color--white;
+                        }
+                    }
+                }
+    
+                .menu {
+                    border-radius: 0.5rem;
+                    margin-top: 2rem;
+                    position: absolute;
+                    padding: 2rem 4rem 2rem 2rem;
+                    color: $color--black--blue;
+                    background: $color--white;
+                    top: 100%;
+                    left: 0;
+                    height: 150px;
+                    width: 150px;
+                    transform: translateX(-2rem);
+                    font-weight: 300;
+                    transition: opacity 200ms ease-in-out;
+                    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.3);
+                    h2
+                    {
+                        font-weight: 400;
+                        padding-bottom: 1rem;
+                        &:hover {
+                            font-weight: 700;
+                        }
+                    }
+    
+                }
+            }
+    
+        }
+        .sign {
+            a:last-child {
+                background-color: $color--white;
+                color: $color--red;
+                &:hover {
+                    background: $color--primary--light--red;
+                    color: $color--white;
+                }
+            }
+        }
+    }
+    
+
+
+    .mobile {
+        display: none;
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        .hamburger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 16px;
+            width: 30px;
+            
+            .line {
+                backface-visibility: hidden;
+                transition: all 100ms ease-in;
+                transform-origin: left;
+                height: 2px;
+                width: 100%;
+                background-color: $color--white;
+            }
+        }
+
+        .menu__mobile
+        {
+            border-radius: 0.5rem;
+            flex-direction: column;
+            transition: all 100ms ease-in-out;
+            position: absolute;
+            background-color: $color--white;
+            color: $color--blue;
+            width: 100%;
+            top: 100%;
+            left: 50%;
+            margin-top: 2rem;
+            padding: 2rem;
+            transform: translateX(-50%);
+
+            .mobile__click {
+                .menu__wrapper {
+                    position: relative;
+                    h2 {
+                        margin: 0;
+                   }
+                }
+                
+                img {
+                    transition: all 100ms ease-in-out;
+                    position: absolute;
+                    right: -1.5rem;
+                    top: 50%;
+                }
+            }
+
+
+            .menu {
+                border-radius: 0.5rem;
+                max-width: 250px;
+                width: 100%;
+                padding: 2rem;
+                color: $color--dark--grayish--blue;
+                background-color: $color--grayish--blue;
+                text-align: center;
+                flex-direction: column;
+
+                h2 {
+                    padding: 1rem;
+                    margin: 0;
+                }
+            }
+
+            .line {
+                margin: 1rem 0rem;
+                max-width: 250px;
+                width: 100%;
+                height: 1px;
+                background-color: $color--grayish--blue;
+            }
+
+            .sign {
+                flex-direction: column;
+                a {
+                    margin: 0;
+                    &:first-child {
+                        color: $color--blue;
+                        padding: 2rem 0rem;
+                    }
+                    &:last-child {
+                        background: linear-gradient(right ,$color--red, $color--light--red);
+                        color: $color--white;
+                        margin-bottom: 2rem;
+                    }
+                }
+               
+            }
+        }
+
+        .active__menu {
+            padding: 2rem 0rem;
+        }
+    }
+
+
+}
+
+
+
+
+
+.modern {
+    padding: 10rem 2rem;
+    min-height: 50vh;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+        font-weight: 700;
+        padding-bottom: 2rem;
+    }
+    .header__links {
+        padding-top: 4rem;
+        a:first-child {
+            margin: 0;
+           background-color: $color--white;
+           font-weight: 700;
+           border-radius: 2.5rem;
+           color: $color--red;
+           &:hover {
+            background: $color--primary--light--red;
+            color: $color--white;
+           }
+        }
+        
+        a:nth-of-type(2) {
+            border: 1px solid white;
+            &:hover {
+                background: $color--white;
+                color: $color--red;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:900px)
+{
+    nav {
+        .pc {
+            display: none;
+        }
+
+        .mobile {
+            display: flex;
+        }
+    }
+}
